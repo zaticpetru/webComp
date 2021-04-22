@@ -1,4 +1,5 @@
 import { EventBus } from '../eventBus.js';
+import { LOGIN_EVENT } from '../eventNames.js';
 
 export default class LoginComponent extends HTMLElement {
     constructor() {
@@ -22,7 +23,8 @@ export default class LoginComponent extends HTMLElement {
         `;
         
         this.querySelector('#signIn').addEventListener('click', event => {
-            EventBus.dispatchEvent('test-event', {some_inf: "informatie complet conf"});
+            event.preventDefault();
+            EventBus.dispatchEvent(LOGIN_EVENT, {some_inf: "confidential information"});
         });
     }
 }

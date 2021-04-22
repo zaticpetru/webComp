@@ -2,6 +2,8 @@ import { EventBus } from './eventBus.js';
 import MainHeader from './components/mainHeader.js';
 import MainFooter from './components/mainFooter.js';
 import MainContent from './components/mainContent.js';
+import { LOGIN_EVENT } from '../eventNames.js';
+
 
 class RootApp extends HTMLElement {
 
@@ -15,7 +17,7 @@ class RootApp extends HTMLElement {
             "loggedIn" : false,
             "expenses" : ['first expense', 'second expense']
         }
-        EventBus.addEventListener('test-event', event => {
+        EventBus.addEventListener(LOGIN_EVENT, event => {
             console.log(event);
         });
     }

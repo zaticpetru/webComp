@@ -1,4 +1,5 @@
 import { EventBus } from '../eventBus.js';
+import { LOGIN_EVENT } from '../eventNames.js';
 
 
 export default class MainFooter extends HTMLElement {
@@ -18,7 +19,7 @@ export default class MainFooter extends HTMLElement {
         </footer>
         `;
 
-        EventBus.addEventListener('test-event', event => {
+        EventBus.addEventListener(LOGIN_EVENT, event => {
             this.querySelector("h1").innerHTML += "test";
         });
     }

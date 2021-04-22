@@ -17,7 +17,9 @@ export default class DemoComponent extends HTMLElement {
                     position: relative;
                     flex-direction: column;
 
-                    min-height: 250px;
+                    height: 250px;
+                    overflow: hidden;
+
                     padding: 1.5rem;
                     width: 90%;
                     min-width: 250px;
@@ -48,7 +50,10 @@ export default class DemoComponent extends HTMLElement {
                 }
 
                 .card.active {
+                    overflow: visible;
                     display: block;
+                    min-height:250px;
+                    height: auto;
                     z-index: 1;
                     transform: translateX(2rem);
 
@@ -72,6 +77,10 @@ export default class DemoComponent extends HTMLElement {
                 <article class="card">
                     <header class="card-header">
                         <p>Some text in p</p>
+                        <h2>Some text in card. Try this out</h2>
+                        <h2>Some text in card. Try this out</h2>
+                        <h2>Some text in card. Try this out</h2>
+                        <h2>Some text in card. Try this out</h2>
                         <h2>Some text in card. Try this out</h2>
                     </header>
                 </article>
